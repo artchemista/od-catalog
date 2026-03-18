@@ -8,10 +8,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
   <style>
-    * {
+    *, *::before, *::after {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    html {
+      background: #111407;
+      overflow-x: hidden;
     }
 
     body {
@@ -19,7 +24,9 @@
       color: #d4cebc;
       font-family: 'Raleway', sans-serif;
       max-width: 600px;
+      width: 100%;
       margin: 0 auto;
+      overflow-x: hidden;
     }
 
     /* ── HEADER ── */
