@@ -6,185 +6,270 @@
   <title>Гесографія — Олег Денисенко</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
   <style>
-    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-    :root {
-      --bg: #0c0c0c; --gold: #c9a84c; --gold-dim: rgba(201,168,76,0.22);
-      --cream: #ede8df; --muted: #7a7570;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    html { scroll-behavior:smooth; }
+
     body {
-      background: var(--bg); color: var(--cream);
-      font-family: 'Jost', sans-serif; font-weight: 300;
-      max-width: 680px; margin: 0 auto;
-      -webkit-font-smoothing: antialiased;
+      background: #fffdf8;
+      color: #4a4845;
+      font-family: 'Raleway', sans-serif;
+      max-width: 600px;
+      margin: 0 auto;
     }
+
+    /* ── HEADER ── */
     header {
-      padding: 64px 40px 56px; text-align: center;
+      padding: 56px 32px 48px;
+      border-bottom: 0.5px solid #d5af5c;
+      text-align: center;
     }
-    header::after {
-      content:''; display:block; width:48px; height:1px;
-      background:var(--gold); margin:32px auto 0;
+
+    header .site-name {
+      font-family: 'Raleway', sans-serif;
+      font-size: 26px;
+      font-weight: 300;
+      letter-spacing: 7px;
+      text-transform: uppercase;
+      color: #731925;
+      margin-bottom: 16px;
     }
-    .h-eyebrow {
-      font-family:'Jost',sans-serif; font-size:11px; font-weight:300;
-      letter-spacing:8px; text-transform:uppercase;
-      color:var(--gold); margin-bottom:18px;
+
+    header .series-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 72px;
+      font-weight: 300;
+      letter-spacing: 2px;
+      color: #074370;
+      line-height: 1.1;
     }
-    .h-name {
-      font-family:'Cormorant Garamond',serif; font-size:68px;
-      font-weight:300; letter-spacing:3px; color:var(--cream); line-height:1.05;
-    }
+
+    /* ── WORK BLOCK ── */
     .work {
-      padding: 48px 0; border-bottom: 1px solid var(--gold-dim);
+      border-bottom: 0.5px solid #e8e4dc;
     }
-    .work-img-wrap { overflow:hidden; }
-    .work-img-wrap img {
-      width:100%; display:block;
-      transition: transform 1.4s cubic-bezier(0.25,0.46,0.45,0.94);
+
+    .work-image-wrap {
+      overflow: hidden;
     }
-    .work-img-wrap:hover img { transform:scale(1.30); }
-    .work-body { padding: 32px 40px 8px; }
-    .work-number {
-      font-family:'Jost',sans-serif; font-size:10px; font-weight:200;
-      letter-spacing:5px; color:var(--muted); text-transform:uppercase; margin-bottom:12px;
+
+    .work-image-wrap img {
+      width: 100%;
+      display: block;
+      transition: transform 1.2s ease;
     }
+
+    .work-image-wrap:hover img {
+      transform: scale(1.30);
+    }
+
+    .work-info {
+      padding: 16px 36px 52px;
+      text-align: center;
+    }
+
+    /* gold ornament above title */
+    .work-info::before {
+      content: '✦';
+      display: block;
+      font-size: 10px;
+      color: #d5af5c;
+      letter-spacing: 8px;
+      margin-bottom: 10px;
+    }
+
     .work-title {
-      font-family:'Cormorant Garamond',serif; font-size:52px; font-weight:400;
-      letter-spacing:5px; text-transform:uppercase; color:var(--cream);
-      line-height:1.1; margin-bottom:24px;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 60px;
+      font-weight: 500;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #074370;
+      line-height: 1.15;
+      margin-bottom: 14px;
     }
-    .work-desc {
-      font-family:'Jost',sans-serif; font-size:16px; font-weight:300;
-      line-height:1.95; color:#b5b0a8; letter-spacing:0.3px; margin-bottom:36px;
+
+    .work-description {
+      font-family: 'Raleway', sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 2;
+      color: #4a4845;
+      letter-spacing: 0.4px;
+      margin-bottom: 12px;
+      text-align: left;
     }
+
     .work-meta {
-      display:flex; flex-direction:column; gap:6px;
-      padding-top:24px; border-top:1px solid var(--gold-dim);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
     }
-    .meta-technique {
-      font-family:'Jost',sans-serif; font-size:12px; font-weight:300;
-      letter-spacing:5px; text-transform:uppercase; color:var(--gold);
+
+    .work-meta::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 0.5px;
+      background: #d5af5c;
+      margin-bottom: 10px;
     }
-    .meta-materials {
-      font-family:'Jost',sans-serif; font-size:11px; font-weight:200;
-      letter-spacing:4px; text-transform:uppercase; color:rgba(201,168,76,0.55);
+
+    .work-technique {
+      font-family: 'Raleway', sans-serif;
+      font-size: 22px;
+      font-weight: 300;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #bf9734;
     }
-    .meta-size {
-      font-family:'Jost',sans-serif; font-size:12px; font-weight:200;
-      letter-spacing:4px; text-transform:uppercase; color:var(--muted); margin-top:2px;
+
+    .work-materials {
+      font-family: 'Raleway', sans-serif;
+      font-size: 16px;
+      font-weight: 200;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #bf9734;
     }
+
+    .work-size {
+      font-family: 'Raleway', sans-serif;
+      font-size: 22px;
+      font-weight: 200;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #ababab;
+    }
+
+    /* ── FOOTER ── */
     footer {
-      padding:56px 40px; text-align:center;
+      background: #f5f2ec;
+      padding: 40px 32px;
+      text-align: center;
+      border-top: 0.5px solid #d5af5c;
     }
-    footer::before {
-      content:''; display:block; width:48px; height:1px;
-      background:var(--gold); margin:0 auto 32px;
-    }
+
     footer p {
-      font-family:'Jost',sans-serif; font-size:10px; font-weight:200;
-      letter-spacing:6px; text-transform:uppercase; color:var(--muted);
+      font-family: 'Raleway', sans-serif;
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #ababab;
     }
-    footer a { color:var(--gold); text-decoration:none; }
-    @media (max-width:480px) {
-      .h-name { font-size:48px; }
-      .work-title { font-size:38px; letter-spacing:3px; }
-      .work-body { padding:24px 24px 8px; }
-      header { padding:48px 24px 40px; }
+
+    footer a {
+      color: #bf9734;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <div class="h-eyebrow">Гесографія</div>
-    <div class="h-name">Олег Денисенко</div>
+    <div class="site-name">Гесографія</div>
+    <div class="series-name">Олег Денисенко</div>
   </header>
 
   <div class="work">
-    <div class="work-img-wrap"><img src="img/temptation.jpg" alt="Спокуси"></div>
-    <div class="work-body">
-      <div class="work-number">049</div>
+    <div class="work-image-wrap">
+      <img src="img/temptation.jpg" alt="Спокуси">
+    </div>
+    <div class="work-info">
       <div class="work-title">Спокуси</div>
-      <div class="work-desc">Алегорія ризикованого гравця–переможця. Спокуси — загибель для одних, джерело наснаги для інших. Багато хто досягає досконалості в умиротворенні й цілковитому відстороненні від них, але тільки обраний вступає зі спокусами в захопливу, ризиковану гру — і не піддається, а виграє.</div>
+      <div class="work-description">Алегорія ризикованого гравця–переможця. Спокуси — загибель для одних, джерело наснаги для інших. Багато хто досягає досконалості в умиротворенні й цілковитому відстороненні від них, але тільки обраний вступає зі спокусами в захопливу, ризиковану гру — і не піддається, а виграє.</div>
       <div class="work-meta">
-        <span class="meta-technique">Гесографія</span>
-        <span class="meta-materials">Дерево · Левкас · Олія</span>
-        <span class="meta-size">50 × 34 см</span>
+        <span class="work-technique">Гесографія</span>
+        <span class="work-materials">Дерево · Левкас · Олія</span>
+        <span class="work-size">50 × 34 см</span>
       </div>
     </div>
   </div>
 
   <div class="work">
-    <div class="work-img-wrap"><img src="img/michael.jpg" alt="Архистратиг Михаїл"></div>
-    <div class="work-body">
-      <div class="work-number">047</div>
+    <div class="work-image-wrap">
+      <img src="img/michael.jpg" alt="Архистратиг Михаїл">
+    </div>
+    <div class="work-info">
       <div class="work-title">Архистратиг Михаїл</div>
-      <div class="work-desc">Алегорія оборонця справедливості, чесноти якого це безсторонність та добросовісність, а життєве кредо — «Зодягнуся в справедливість». Михаїл — небесний покровитель серця України — Києва. Духовно присутній у найскладніших моментах нашої історії. Уособлює благородний запал захищати потребуючих і поборювати несправедливість.</div>
+      <div class="work-description">Алегорія оборонця справедливості, чесноти якого це безсторонність та добросовісність, а життєве кредо — «Зодягнуся в справедливість». Михаїл — небесний покровитель серця України — Києва. Духовно присутній у найскладніших моментах нашої історії. Уособлює благородний запал захищати потребуючих і поборювати несправедливість.</div>
       <div class="work-meta">
-        <span class="meta-technique">Гесографія</span>
-        <span class="meta-materials">Дерево · Левкас · Олія</span>
-        <span class="meta-size">50 × 34 см</span>
+        <span class="work-technique">Гесографія</span>
+        <span class="work-materials">Дерево · Левкас · Олія</span>
+        <span class="work-size">50 × 34 см</span>
       </div>
     </div>
   </div>
 
   <div class="work">
-    <div class="work-img-wrap"><img src="img/cat.jpg" alt="Кіт"></div>
-    <div class="work-body">
-      <div class="work-number">055</div>
+    <div class="work-image-wrap">
+      <img src="img/cat.jpg" alt="Кіт">
+    </div>
+    <div class="work-info">
       <div class="work-title">Кіт</div>
-      <div class="work-desc">Зазвичай неквапний та розслаблений, але блискавично швидкий у мить потреби, цей звір тисячоліттями живе серед людей, добре усвідомлюючи, що саме він — господар у домі. Його характер властивий тим, хто вміє у позірній бездіяльності терпляче берегти сили, щоб потім, упіймавши нагоду, бездоганно застосувати їх і стати господарем ситуації.</div>
+      <div class="work-description">Зазвичай неквапний та розслаблений, але блискавично швидкий у мить потреби, цей звір тисячоліттями живе серед людей, добре усвідомлюючи, що саме він — господар у домі. Його характер властивий тим, хто вміє у позірній бездіяльності терпляче берегти сили, щоб потім, упіймавши нагоду, бездоганно застосувати їх і стати господарем ситуації.</div>
       <div class="work-meta">
-        <span class="meta-technique">Гесографія</span>
-        <span class="meta-materials">Дерево · Левкас · Олія</span>
-        <span class="meta-size">30 × 30 см</span>
+        <span class="work-technique">Гесографія</span>
+        <span class="work-materials">Дерево · Левкас · Олія</span>
+        <span class="work-size">30 × 30 см</span>
       </div>
     </div>
   </div>
 
   <div class="work">
-    <div class="work-img-wrap"><img src="img/flora.jpg" alt="Флора"></div>
-    <div class="work-body">
-      <div class="work-number">054</div>
+    <div class="work-image-wrap">
+      <img src="img/flora.jpg" alt="Флора">
+    </div>
+    <div class="work-info">
       <div class="work-title">Флора</div>
-      <div class="work-desc">Богиня квітів, дерев, різнотрав'я — зеленої стихії, яка ловить промені Сонця й вбирає соки Землі, щоб з'єднати їх у поживу для всього живого. Флора уособлює тих, хто, звівши разом енергію завзяття і ресурс ощадності, стає насінням майбутнього і з подихом весни проростає квітучим буянням краси та плодючості.</div>
+      <div class="work-description">Богиня квітів, дерев, різнотрав'я — зеленої стихії, яка ловить промені Сонця й вбирає соки Землі, щоб з'єднати їх у поживу для всього живого. Флора уособлює тих, хто, звівши разом енергію завзяття і ресурс ощадності, стає насінням майбутнього і з подихом весни проростає квітучим буянням краси та плодючості.</div>
       <div class="work-meta">
-        <span class="meta-technique">Гесографія</span>
-        <span class="meta-materials">Дерево · Левкас · Олія</span>
-        <span class="meta-size">30 × 30 см</span>
+        <span class="work-technique">Гесографія</span>
+        <span class="work-materials">Дерево · Левкас · Олія</span>
+        <span class="work-size">30 × 30 см</span>
       </div>
     </div>
   </div>
 
   <div class="work">
-    <div class="work-img-wrap"><img src="img/desire.jpg" alt="Жага польоту"></div>
-    <div class="work-body">
-      <div class="work-number">052</div>
+    <div class="work-image-wrap">
+      <img src="img/desire.jpg" alt="Жага польоту">
+    </div>
+    <div class="work-info">
       <div class="work-title">Жага польоту</div>
-      <div class="work-desc">Для того, щоб навчитися літати наяву, треба вміти літати у мріях. Хто має волю і уяву, той неодмінно створить матеріальні знаряддя і відшукає натхнення у довколишньому світі, щоб рано чи пізно сягнути заповітної мети.</div>
+      <div class="work-description">Для того, щоб навчитися літати наяву, треба вміти літати у мріях. Хто має волю і уяву, той неодмінно створить матеріальні знаряддя і відшукає натхнення у довколишньому світі, щоб рано чи пізно сягнути заповітної мети.</div>
       <div class="work-meta">
-        <span class="meta-technique">Гесографія</span>
-        <span class="meta-materials">Дерево · Левкас · Олія</span>
-        <span class="meta-size">35 × 25 см</span>
+        <span class="work-technique">Гесографія</span>
+        <span class="work-materials">Дерево · Левкас · Олія</span>
+        <span class="work-size">35 × 25 см</span>
       </div>
     </div>
   </div>
 
   <div class="work">
-    <div class="work-img-wrap"><img src="img/pramater.jpg" alt="Прамати"></div>
-    <div class="work-body">
-      <div class="work-number">053</div>
+    <div class="work-image-wrap">
+      <img src="img/pramater.jpg" alt="Прамати">
+    </div>
+    <div class="work-info">
       <div class="work-title">Прамати</div>
-      <div class="work-desc">Традиційні українські ляльки в царственній одежі — це вшанування безлічі поколінь матерів і дітей, які пронесли світло життя крізь темні часи заради остаточної перемоги над смертю. Тріумфуюча постать Матері з Сином — символ незламності кожного, хто не здається в боротьбі на стороні світла.</div>
+      <div class="work-description">Традиційні українські ляльки в царственній одежі — це вшанування безлічі поколінь матерів і дітей, які пронесли світло життя крізь темні часи заради остаточної перемоги над смертю. Тріумфуюча постать Матері з Сином — символ незламності кожного, хто не здається в боротьбі на стороні світла.</div>
       <div class="work-meta">
-        <span class="meta-technique">Гесографія</span>
-        <span class="meta-materials">Дерево · Левкас · Олія</span>
-        <span class="meta-size">33 × 20 см</span>
+        <span class="work-technique">Гесографія</span>
+        <span class="work-materials">Дерево · Левкас · Олія</span>
+        <span class="work-size">33 × 20 см</span>
       </div>
     </div>
   </div>
 
-  <footer><p><a href="https://www.antiqvitas-nova.art">antiqvitas-nova.art</a></p></footer>
+  <footer>
+    <p><a href="https://www.antiqvitas-nova.art">antiqvitas-nova.art</a></p>
+  </footer>
+
 </body>
 </html>
