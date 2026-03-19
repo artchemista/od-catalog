@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gessography — Колорвеї</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Georgia', serif;
+    background: #F5F2ED;
+    color: #2A2420;
+    padding: 40px 24px;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #C8BFB0;
+    padding-bottom: 24px;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  header h1 {
+    font-size: 26px;
+    font-weight: normal;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  header p {
+    font-size: 16px;
+    color: #7A6A5A;
+    line-height: 1.7;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: #FDFAF6;
+    border: 1px solid #DDD5C8;
+    padding: 28px 24px;
+  }
+
+  .card-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #E8E0D4;
+    padding-bottom: 12px;
+  }
+
+  .card-name {
+    font-size: 22px;
+    font-weight: normal;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .card-number {
+    font-size: 14px;
+    color: #9A8A7A;
+    letter-spacing: 0.06em;
+  }
+
+  .swatches {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 20px;
+    height: 56px;
+  }
+
+  .swatch {
+    flex: 1;
+    position: relative;
+  }
+
+  .swatch-label {
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 10px;
+    color: rgba(255,255,255,0.75);
+    letter-spacing: 0.03em;
+    mix-blend-mode: difference;
+  }
+
+  .meta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .meta-row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 10px;
+    line-height: 1.6;
+  }
+
+  .meta-label {
+    color: #9A8A7A;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding-top: 2px;
+  }
+
+  .meta-value {
+    font-size: 16px;
+    color: #2A2420;
+  }
+
+  .market-phrase {
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: #F0EBE3;
+    border-left: 3px solid #C8BFB0;
+    font-size: 16px;
+    color: #4A3A2A;
+    line-height: 1.6;
+  }
+
+  .signature-example {
+    margin-top: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 15px;
+    color: #7A6A5A;
+    background: #F5F0E8;
+    padding: 8px 12px;
+    letter-spacing: 0.04em;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid #C8BFB0;
+    font-size: 15px;
+    color: #9A8A7A;
+    line-height: 1.8;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 24px 16px; }
+    header h1 { font-size: 20px; }
+    header p { font-size: 15px; }
+    .card { padding: 20px 16px; }
+    .card-name { font-size: 19px; }
+    .swatches { height: 48px; }
+    .meta-row { grid-template-columns: 88px 1fr; }
+    .meta-label { font-size: 12px; }
+    .meta-value { font-size: 15px; }
+    .market-phrase { font-size: 15px; }
+    .signature-example { font-size: 14px; }
+    .swatch-label { font-size: 9px; }
+  }
+
+  @media print {
+    body { background: white; }
+    .card { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Gessography — Колорвеї</h1>
+  <p>Кожен примірник унікальний — повністю ручна робота на кожному етапі;<br>природна варіація є властивістю техніки.</p>
+</header>
+
+<div class="cards">
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-name">Fresco</span>
+      <span class="card-number">01 / 10</span>
+    </div>
+    <div class="swatches">
+      <div class="swatch" style="background:#C9A89B;"><span class="swatch-label">#C9A89B</span></div>
+      <div class="swatch" style="background:#9BB5C1;"><span class="swatch-label">#9BB5C1</span></div>
+      <div class="swatch" style="background:#A8B89A;"><span class="swatch-label">#A8B89A</span></div>
+      <div class="swatch" style="background:#C8A87A;"><span class="swatch-label">#C8A87A</span></div>
+      <div class="swatch" style="background:#EDE5D8; border:1px solid #C8BFB0;"><span class="swatch-label">#EDE5D8</span></div>
+    </div>
+    <div class="meta">
+      <div class="meta-row"><span class="meta-label">Характер</span><span class="meta-value">Ніжна, розбілена палітра — як стародавні фрескові розписи</span></div>
+      <div class="meta-row"><span class="meta-label">Відтінки</span><span class="meta-value">Припорошені рожеві, блакитні, зелені, вохристі — з додаванням білила. Матові, стримані</span></div>
+      <div class="meta-row"><span class="meta-label">Асоціації</span><span class="meta-value">Помпеї, Джотто, візантійські базиліки. Час, що вигорів на стіні</span></div>
+    </div>
+    <div class="market-phrase">Ніжна, крейдова палітра — дух давніх фрескових пігментів</div>
+    <div class="signature-example">Підпис · "Fresco"  1/33</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-name">Icon</span>
+      <span class="card-number">02 / 10</span>
+    </div>
+    <div class="swatches">
+      <div class="swatch" style="background:#8B1A1A;"><span class="swatch-label">#8B1A1A</span></div>
+      <div class="swatch" style="background:#C8941A;"><span class="swatch-label">#C8941A</span></div>
+      <div class="swatch" style="background:#1A3A8B;"><span class="swatch-label">#1A3A8B</span></div>
+      <div class="swatch" style="background:#1A6B3A;"><span class="swatch-label">#1A6B3A</span></div>
+      <div class="swatch" style="background:#2A1A0A;"><span class="swatch-label">#2A1A0A</span></div>
+    </div>
+    <div class="meta">
+      <div class="meta-row"><span class="meta-label">Характер</span><span class="meta-value">Відкрита, насичена палітра — як ікони темперою</span></div>
+      <div class="meta-row"><span class="meta-label">Відтінки</span><span class="meta-value">Інтенсивний червоний, золотисто-охристий, кобальтовий синій, смарагд. Контрасти чисті</span></div>
+      <div class="meta-row"><span class="meta-label">Асоціації</span><span class="meta-value">Візантійська ікона, середньовічна темпера, золото листове</span></div>
+    </div>
+    <div class="market-phrase">Насичені, відкриті кольори — традиція візантійської ікони</div>
+    <div class="signature-example">Підпис · "Icon"  1/33</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-name">Petrichor</span>
+      <span class="card-number">03 / 10</span>
+    </div>
+    <div class="swatches">
+      <div class="swatch" style="background:#8B5E3C;"><span class="swatch-label">#8B5E3C</span></div>
+      <div class="swatch" style="background:#5C3A1A;"><span class="swatch-label">#5C3A1A</span></div>
+      <div class="swatch" style="background:#7A6A5A;"><span class="swatch-label">#7A6A5A</span></div>
+      <div class="swatch" style="background:#8B7040;"><span class="swatch-label">#8B7040</span></div>
+      <div class="swatch" style="background:#6A6058;"><span class="swatch-label">#6A6058</span></div>
+    </div>
+    <div class="meta">
+      <div class="meta-row"><span class="meta-label">Характер</span><span class="meta-value">Земляна, дощова, мінеральна палітра</span></div>
+      <div class="meta-row"><span class="meta-label">Відтінки</span><span class="meta-value">Сира сієна, паленая умбра, сіро-коричневий, темна вохра. Мокра земля, кора дерева</span></div>
+      <div class="meta-row"><span class="meta-label">Асоціації</span><span class="meta-value">Запах дощу на землі. Ліс, мінерали, глина</span></div>
+    </div>
+    <div class="market-phrase">Земляні тони — сира сієна, умбра і мінеральні відтінки мокрого каменю</div>
+    <div class="signature-example">Підпис · "Petrichor"  1/33</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-name">Antique</span>
+      <span class="card-number">04 / 10</span>
+    </div>
+    <div class="swatches">
+      <div class="swatch" style="background:#8B6914;"><span class="swatch-label">#8B6914</span></div>
+      <div class="swatch" style="background:#C8B890;"><span class="swatch-label">#C8B890</span></div>
+      <div class="swatch" style="background:#D4C5A0;"><span class="swatch-label">#D4C5A0</span></div>
+      <div class="swatch" style="background:#8A7A6A;"><span class="swatch-label">#8A7A6A</span></div>
+      <div class="swatch" style="background:#3A2A1A;"><span class="swatch-label">#3A2A1A</span></div>
+    </div>
+    <div class="meta">
+      <div class="meta-row"><span class="meta-label">Характер</span><span class="meta-value">Постарілий, вицвілий монохром — як старовинний папір або пергамент</span></div>
+      <div class="meta-row"><span class="meta-label">Відтінки</span><span class="meta-value">Тепла сепія, жовкла слонова кістка, коричнево-сірий, теплий чорний</span></div>
+      <div class="meta-row"><span class="meta-label">Асоціації</span><span class="meta-value">Старовинна гравюра, пожовклий аркуш, архівний документ</span></div>
+    </div>
+    <div class="market-phrase">Тепла сепія й слонова кістка — палітра старовинних рукописів і антикварних гравюр</div>
+    <div class="signature-example">Підпис · "Antique"  1/33</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-name">Monochrome</span>
+      <span class="card-number">05 / 10</span>
+    </div>
+    <div class="swatches">
+      <div class="swatch" style="background:#E8E4E0; border:1px solid #DDD5C8;"><span class="swatch-label">#E8E4E0</span></div>
+      <div class="swatch" style="background:#B8B4B0;"><span class="swatch-label">#B8B4B0</span></div>
+      <div class="swatch" style="background:#888480;"><span class="swatch-label">#888480</span></div>
+      <div class="swatch" style="background:#585450;"><span class="swatch-label">#585450</span></div>
+      <div class="swatch" style="background:#282420;"><span class="swatch-label">#282420</span></div>
+    </div>
+    <div class="meta">
+      <div class="meta-row"><span class="meta-label">Характер</span><span class="meta-value">Один колір у різних тональностях — від світлого до темного</span></div>
+      <div class="meta-row"><span class="meta-label">Відтінки</span><span class="meta-value">Один базовий колір + розбілений і затемнений варіанти. Без хроматичних акцентів</span></div>
+      <div class="meta-row"><span class="meta-label">Асоціації</span><span class="meta-value">Класична графіка, чистота форми над кольором</span></div>
+    </div>
+    <div class="market-phrase">Одноколірна палітра — форма домінує над кольором</div>
+    <div class="signature-example">Підпис · "Monochrome"  1/33</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-name">Nocturne</span>
+      <span class="card-number">06 / 10</span>
+    </div>
+    <div class="swatches">
+      <div class="swatch" style="background:#003153;"><span class="swatch-label">#003153</span></div>
+      <div class="swatch" style="background:#2D1B69;"><span class="swatch-label">#2D1B69</span></div>
+      <div class="swatch" style="background:#2C3539;"><span class="swatch-label">#2C3539</span></div>
+      <div class="swatch" style="background:#6E8494;"><span class="swatch-label">#6E8494</span></div>
+      <div class="swatch" style="background:#1A1A2E;"><span class="swatch-label">#1A1A2E</span></div>
+    </div>
+    <div class="meta">
+      <div class="meta-row"><span class="meta-label">Характер</span><span class="meta-value">Темна нічна палітра — глибока, драматична</span></div>
+      <div class="meta-row"><span class="meta-label">Відтінки</span><span class="meta-value">Пруський синій, антрацит, сталевий сірий, чорний з теплим підтоном</span></div>
+      <div class="meta-row"><span class="meta-label">Асоціації</span><span class="meta-value">Нічне небо над містом, тиша після опівночі. Вістлер, «Ноктюрни»</span></div>
+    </div>
+    <div class="market-phrase">Глибокий нічний синій і чорний — у дусі ноктюрнів Вістлера</div>
+    <div class="signature-example">Підпис · "Nocturne"  1/33</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-name">Ember</span>
+      <span class="card-number">07 / 10</span>
+    </div>
+    <div class="swatches">
+      <div class="swatch" style="background:#C17A4A;"><span class="swatch-label">#C17A4A</span></div>
+      <div class="swatch" style="background:#8B3A1A;"><span class="swatch-label">#8B3A1A</span></div>
+      <div class="swatch" style="background:#B86A28;"><span class="swatch-label">#B86A28</span></div>
+      <div class="swatch" style="background:#8B7340;"><span class="swatch-label">#8B7340</span></div>
+      <div class="swatch" style="background:#5C3018;"><span class="swatch-label">#5C3018</span></div>
+    </div>
+    <div class="meta">
+      <div class="meta-row"><span class="meta-label">Характер</span><span class="meta-value">Тепле жевріюче вугілля, жар і попіл</span></div>
+      <div class="meta-row"><span class="meta-label">Відтінки</span><span class="meta-value">Теракота, іржаво-помаранчевий, спалена охра, темне золото, бурий</span></div>
+      <div class="meta-row"><span class="meta-label">Асоціації</span><span class="meta-value">Жар каміна, розпечений метал, осіннє листя в сутінках</span></div>
+    </div>
+    <div class="market-phrase">Тепле вугілля — теракота, іржа й темне паленое золото</div>
+    <div class="signature-example">Підпис · "Ember"  1/33</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-name">Verdigris</span>
+      <span class="card-number">08 / 10</span>
+    </div>
+    <div class="swatches">
+      <div class="swatch" style="background:#3B7A6A;"><span class="swatch-label">#3B7A6A</span></div>
+      <div class="swatch" style="background:#2A6B7A;"><span class="swatch-label">#2A6B7A</span></div>
+      <div class="swatch" style="background:#4A8A7A;"><span class="swatch-label">#4A8A7A</span></div>
+      <div class="swatch" style="background:#6A8A7A;"><span class="swatch-label">#6A8A7A</span></div>
+      <div class="swatch" style="background:#5A3A1A;"><span class="swatch-label">#5A3A1A</span></div>
+    </div>
+    <div class="meta">
+      <div class="meta-row"><span class="meta-label">Характер</span><span class="meta-value">Патина старої міді та бронзи</span></div>
+      <div class="meta-row"><span class="meta-label">Відтінки</span><span class="meta-value">Зелено-бірюзовий, окислений синьо-зелений, сіро-зелений, темна мідь</span></div>
+      <div class="meta-row"><span class="meta-label">Асоціації</span><span class="meta-value">Стара бронзова скульптура, дах собору, давні монети</span></div>
+    </div>
+    <div class="market-phrase">Зелена патина старої міді та антикварної бронзи</div>
+    <div class="signature-example">Підпис · "Verdigris"  1/33</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-name">Alabaster</span>
+      <span class="card-number">09 / 10</span>
+    </div>
+    <div class="swatches">
+      <div class="swatch" style="background:#F5F0E8; border:1px solid #DDD5C8;"><span class="swatch-label">#F5F0E8</span></div>
+      <div class="swatch" style="background:#EDE0C4;"><span class="swatch-label">#EDE0C4</span></div>
+      <div class="swatch" style="background:#E8DDD0;"><span class="swatch-label">#E8DDD0</span></div>
+      <div class="swatch" style="background:#DDD0C0;"><span class="swatch-label">#DDD0C0</span></div>
+      <div class="swatch" style="background:#C8B8A0;"><span class="swatch-label">#C8B8A0</span></div>
+    </div>
+    <div class="meta">
+      <div class="meta-row"><span class="meta-label">Характер</span><span class="meta-value">Майже білий — дуже світла, повітряна палітра</span></div>
+      <div class="meta-row"><span class="meta-label">Відтінки</span><span class="meta-value">Теплий білий, слонова кістка, бліда пудра, ледь помітний кремовий</span></div>
+      <div class="meta-row"><span class="meta-label">Асоціації</span><span class="meta-value">Алебастр, мармур у розсіяному світлі, першосніг, порцеляна</span></div>
+    </div>
+    <div class="market-phrase">Майже білий люмінозний тон — тепла слонова кістка і ніжні світлі відтінки</div>
+    <div class="signature-example">Підпис · "Alabaster"  1/33</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-name">Sanguine</span>
+      <span class="card-number">10 / 10</span>
+    </div>
+    <div class="swatches">
+      <div class="swatch" style="background:#8B3A2A;"><span class="swatch-label">#8B3A2A</span></div>
+      <div class="swatch" style="background:#A84A30;"><span class="swatch-label">#A84A30</span></div>
+      <div class="swatch" style="background:#7A3028;"><span class="swatch-label">#7A3028</span></div>
+      <div class="swatch" style="background:#6B4030;"><span class="swatch-label">#6B4030</span></div>
+      <div class="swatch" style="background:#4A2818;"><span class="swatch-label">#4A2818</span></div>
+    </div>
+    <div class="meta">
+      <div class="meta-row"><span class="meta-label">Характер</span><span class="meta-value">Червона крейда — класичний графічний термін</span></div>
+      <div class="meta-row"><span class="meta-label">Відтінки</span><span class="meta-value">Теракотово-червоний, сангіна, паленая умбра, темний охристий червоний</span></div>
+      <div class="meta-row"><span class="meta-label">Асоціації</span><span class="meta-value">Малюнки Мікеланджело і да Вінчі сангіною, ренесансна графіка</span></div>
+    </div>
+    <div class="market-phrase">Тони червоної крейди — палітра ренесансних майстер-малюнків</div>
+    <div class="signature-example">Підпис · "Sanguine"  1/33</div>
+  </div>
+
+</div>
+
+<footer>
+  Gessography · Кожен примірник унікальний — повністю ручна робота на кожному етапі;<br>природна варіація є властивістю техніки.
+</footer>
+
+</body>
+</html>
